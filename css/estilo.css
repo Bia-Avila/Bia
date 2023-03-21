@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+/*
+
+        Configurações Padrão
+
+*/
+
+@font-face {
+    font-family: 'Bilagike';
+    src: url("../font/Bilagike.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+
+    --fonte-bila: 'Bilagike';
+
+    --rose: #ed83bf;
+    --rose-main: #e77ab873;
+    --titulo: #f92ea1;
+    --title:  #E98FC2;
+    --titulo-ant-dep: #ffffff;
+
+    --fundo-ant-dep: rgba(229, 129, 229, 0.418);
+
+    --footer: #ff6dc0;
+    --footer-p: #760143;
+
+    --scrollbar: #f92ea1;
+    --scrollbar-thumb: #ff6fc1;
+
+    --borda: rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font-family: var(--fonte-bila);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+
+    background: var(--rose) url('../imagens/logobiaavila/pattern.png') center center repeat fixed;
+    background-size: cover;
+    /*background: var(--rose)*/
+
+    animation: mover 20s ease-in-out .1s alternate-reverse infinite;
+}
+
+main {
+    width: 100%;
+    height: 95%;
+
+    margin: auto;
+    background: var(--rose-main);
+
+    justify-content: center;
+}
+
+#logo {
+    margin: auto;
+    margin-bottom: 7px;
+    height: 30%;
+    width: 57%;
+
+    border-radius: 13%;
+    box-shadow: 1px 2px 5px var(--borda);
+
+    background-color: var(--rose);
+    position: relative;
+    overflow: hidden;
+
+}
+
+#imagem-logo {
+    background: var(--rose) url('../imagens/logobiaavila/sublogo.png') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.cntt {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px 0px 1px var(--borda);
+    margin-bottom: 4%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.imagem-cntt {
+    position: relative;
+    width: 30px;
+    margin: 2px;
+
+    border-radius: 50%;
+    background-color: var(--rose);
+}
+
+.trabalhos {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+
+    background: var(--title);
+    width: 85%;
+    height: 59%;
+
+    border: 1px solid var(--borda);
+    border-radius: 5% 5% 0px 0px; 
+
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+#cabeçalho {
+    position: sticky;
+    height: 20%;
+
+    color: var(--titulo);
+    background: transparent;
+
+    text-align: center;
+
+    padding-top: 2%;
+
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
+.ant-dep {
+    color: var(--titulo-ant-dep);
+    background: var(--fundo-ant-dep);
+    display: inline-block;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin: 2px;
+    padding: 5px;
+    
+    border: 1px solid var(--borda);
+
+    position: sticky;
+    bottom: -100%;
+
+    list-style-type: none;
+    text-align: center;
+
+    /*animation: deg 5s 1s ease-in-out infinite;
+    */
+} 
+
+#ant {
+    right: 65%;
+}
+#dep {
+    left: 65%;
+}
+
+#imagens-trabalho {
+    position: relative;
+    margin: auto;
+    margin-bottom: 2%;
+    height: 80%;
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+
+    width: 100%;
+    height: 5%;
+
+    background-color: var(--footer);
+    color: var(--footer-p);
+
+    font-size: .9em;
+    font-weight: normal;
+
+    text-align: right;
+    padding: 2%;
+    letter-spacing: 2px;
+}
+
+@keyframes mover {
+    0% {
+        background-position: 0 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+    background-image: linear-gradient(var(--rose), var(--scrollbar), var(--footer));
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5%;
+    background-image: var(--scrollbar-thumb);
+    box-shadow: inset 2px 2px 2px hsla(297, 100%, 84%, 0.7), inset -2px -2px 2px rgba(0, 0, 0, .5);
+}

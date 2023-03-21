@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+    /*Configurações T. Celular e T. Tablet*/
+
+@media screen and (min-width: 590px) and (max-width: 992px) {
+
+    .cntt {
+        margin-bottom: 1%;
+    }#whats {
+        border: 2px solid rgb(39, 155, 54);
+    }#insta {
+        border: 2px solid rgb(119, 65, 175);
+    }
+
+    main {
+        height: 120%;
+        padding: 1%;
+    }
+
+    .trabalhos {
+        border-radius: 2%;
+        height: 63%;
+        width: 83%;
+    }
+
+    #cabeçalho {
+        height: 17%;
+    }
+
+    #ant {
+        right: 70%;
+    }
+    #dep {
+        left: 67%;
+    }
+
+}
+
+    /*Configurações Desktop e T. Grandes(Monitor, TV, etc)*/
+
+@media screen and (min-width: 992px){
+
+    body {
+        background: var(--rose);
+    }
+
+    .cntt {
+        margin-bottom: 1%;
+    }
+
+    .cntt img:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
+        transition: .4s, border .3s;
+    }#whats:hover {
+        border: 2px solid rgb(39, 155, 54);
+    }#insta:hover {
+        border: 2px solid rgb(119, 65, 175);
+    }
+
+    main {
+        width: 62%;
+        height: 150%;
+
+        border-radius: 1%;
+
+        margin-top: 2%;
+        margin-bottom: 1%;
+
+        padding: 1%;
+    }
+
+    .trabalhos {
+        border-radius: 1%;
+        height: 65%;
+    }
+
+    #cabeçalho {
+        height: 10%;
+        margin-bottom: 4%;
+        padding: 5px;
+    }
+
+    
+    h1:hover {
+        animation: hover 2s .3 ease-in-out both;
+    }
+
+    .ant-dep {
+        margin-bottom: 13px;
+        
+    } 
+    #ant {
+        right: 70%;
+    }
+    #dep {
+        left: 67%;
+    }
+
+    footer {
+        padding: 0%;
+        height: 3%;
+    }
+}
+
+@keyframes hover {
+    to {
+        letter-spacing: 50px;
+        transition: letter-spacing .1s;
+    }
+}
